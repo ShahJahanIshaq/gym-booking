@@ -7,7 +7,7 @@ from datetime import datetime
 
 GYM = "B-ACTIVE"
 REQUIRED_DATE = "Wednesday"
-REQUIRED_TIME = "1700"
+REQUIRED_TIME = "2030"
 
 available = False
 
@@ -40,6 +40,7 @@ while not available and int(current_time) < 2030:
             break
 
     if available:
+        print(f"[URGENT] Booking Available! Current Time: {datetime.now().strftime('%H:%M:$S')}")
         notification.notify(
             title = "GYM BOOKING AVAILABLE",
             message = f"{REQUIRED_DATE} at {REQUIRED_TIME} is available at {GYM}",
